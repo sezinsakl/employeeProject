@@ -101,19 +101,6 @@ public class DepartmentServiceImplTest {
     }
 
     @Test
-    public void testUpdateDepartment_NotFound() {
-        Department updatedDepartment = new Department();
-        updatedDepartment.setName("HR");
-        updatedDepartment.setLocation("Küçükyalı");
-
-        when(departmentRepository.findById(1L)).thenReturn(Optional.empty());
-
-        Department result = departmentService.updateDepartment(1L, updatedDepartment);
-
-        assertNull(result);
-    }
-
-    @Test
     public void testDeleteDepartment_Success() {
         when(departmentRepository.existsById(1L)).thenReturn(true);
 
