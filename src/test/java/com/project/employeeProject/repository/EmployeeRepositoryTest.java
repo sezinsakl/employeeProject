@@ -18,7 +18,6 @@ public class EmployeeRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        // Clear the repository or set up test data if needed
         employeeRepository.deleteAll();
     }
 
