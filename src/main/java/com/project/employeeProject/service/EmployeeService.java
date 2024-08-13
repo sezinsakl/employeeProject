@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface EmployeeService {
 
-    EmployeeResponse getEmployeeById(Long id);
+    EmployeeResponse getEmployeeById(Long id) throws Exception;
 
     List<Employee> getAllEmployees();
 

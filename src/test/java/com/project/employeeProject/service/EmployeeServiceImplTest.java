@@ -55,7 +55,7 @@ public class EmployeeServiceImplTest {
     }
 
     @Test
-    public void testGetEmployeeById_Success() {
+    public void testGetEmployeeById_Success() throws Exception {
         when(employeeRepository.findById(1L)).thenReturn(Optional.of(employee));
         when(departmentClient.getDepartmentById(1L)).thenReturn(department);
 

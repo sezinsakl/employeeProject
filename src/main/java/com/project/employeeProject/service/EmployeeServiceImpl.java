@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private DepartmentClient departmentClient;
 
     @Override
-    public EmployeeResponse getEmployeeById(Long id) {
+    public EmployeeResponse getEmployeeById(Long id) throws Exception{
         logger.debug("Fetching employee with ID: {}", id);
         EmployeeResponse response = new EmployeeResponse();
         try {
@@ -40,8 +40,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             } else {
                 response.setDepartment(department);
             }
-        } catch (NoSuchElementException e) {
-            logger.error("Error occurred while fetching employee: {}", e.getMessage());
+        } catch (Exception e) {
+            logger.error(ErrorMessage.EMPLOYEE_SERVICE_ERROR + e.getMessage());
             throw e;
         }
         return response;
@@ -58,7 +58,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             logger.error(ErrorMessage.EMPLOYEE_NULL);
             throw new IllegalArgumentException(ErrorMessage.EMPLOYEE_NULL);
         }
-        logger.info("Adding new employee with name: {}", employee.getName());
+        logger.info("Adding new employee with name: ", employee.getName());
         return employeeRepository.save(employee);
     }
 
@@ -81,7 +81,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void deleteEmployee(Long id) {
         if (!employeeRepository.existsById(id)) {
-            logger.error("Employee with ID {} not found for delete", id);
+            logger.error(ErrorMessage.EMPLOYEE_DELETE_ERROR + id);
             throw new NoSuchElementException(ErrorMessage.EMPLOYEE_NOT_FOUND + id);
         }
         employeeRepository.deleteById(id);

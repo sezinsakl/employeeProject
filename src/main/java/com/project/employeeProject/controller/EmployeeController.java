@@ -18,7 +18,7 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<EmployeeResponse> getEmployeeById(@PathVariable("id") Long id) {
+    public ResponseEntity<EmployeeResponse> getEmployeeById(@PathVariable("id") Long id) throws Exception {
         try {
             EmployeeResponse response = employeeService.getEmployeeById(id);
             return ResponseEntity.ok(response);
