@@ -1,15 +1,14 @@
-package com.project.employeeProject;
+package com.project.department;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
-public class EmployeeProjectApplication {
+public class DepartmentServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeProjectApplication.class, args);
+		SpringApplication.run(DepartmentServiceApplication.class, args);
 	}
 
 }

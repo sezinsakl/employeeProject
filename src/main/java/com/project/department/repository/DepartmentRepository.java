@@ -1,6 +1,6 @@
-package com.project.employeeProject.repository;
+package com.project.department.repository;
 
-import com.project.employeeProject.model.Department;
+import com.project.department.model.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

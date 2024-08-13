@@ -1,7 +1,7 @@
-package com.project.employeeProject.service;
+package com.project.department.service;
 
 
-import com.project.employeeProject.model.Department;
+import com.project.department.model.Department;
 
 import java.util.List;
 

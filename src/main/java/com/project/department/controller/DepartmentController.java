@@ -1,7 +1,7 @@
-package com.project.employeeProject.controller;
+package com.project.department.controller;
 
-import com.project.employeeProject.model.Department;
-import com.project.employeeProject.service.DepartmentServiceImpl;
+import com.project.department.model.Department;
+import com.project.department.service.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

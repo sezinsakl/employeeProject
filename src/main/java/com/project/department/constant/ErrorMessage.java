@@ -1,4 +1,4 @@
-package com.project.employeeProject.constant;
+package com.project.department.constant;
 
 public class ErrorMessage {
 

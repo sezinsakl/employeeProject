@@ -1,8 +1,8 @@
-package com.project.employeeProject.service;
+package com.project.department.service;
 
-import com.project.employeeProject.constant.ErrorMessage;
-import com.project.employeeProject.model.Department;
-import com.project.employeeProject.repository.DepartmentRepository;
+import com.project.department.constant.ErrorMessage;
+import com.project.department.model.Department;
+import com.project.department.repository.DepartmentRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
